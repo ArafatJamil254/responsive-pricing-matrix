@@ -2,13 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SaaS Pricing Table Component</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern SaaS Pricing Table</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main class="container">
-    <h1>SaaS Pricing Table Component</h1>
-  </main>
+  <div class="pricing-container">
+    <header class="header">
+      <span class="badge">Flexible Pricing</span>
+      <h1>Simple, transparent pricing</h1>
+      <p class="subtitle">Choose the perfect plan for your team. Switch or cancel anytime.</p>
+      
+      <div class="toggle-container">
+        <span class="toggle-label" id="monthlyLabel">Monthly</span>
+        <button class="toggle-switch" id="billingToggle" role="switch" aria-checked="false" aria-label="Toggle annual billing">
+          <span class="toggle-slider"></span>
+        </button>
+        <span class="toggle-label" id="yearlyLabel">
+          Annually
+          <span class="discount-badge">Save 20%</span>
+        </span>
+      </div>
+    </header>
+
+    <main class="pricing-grid">
+      <!-- Starter Plan -->
+      <div class="pricing-card">
+        <div class="card-header">
+          <h2 class="plan-name">Starter</h2>
+          <p class="plan-desc">For individuals and side projects getting started.</p>
+          <div class="price-wrapper">
+            <span class="currency">$</span>
+            <span class="price-amount" data-monthly="19" data-yearly="15">19</span>
+            <span class="period">/month</span>
+          </div>
+          <span class="billing-note" data-monthly="Billed monthly" data-yearly="Billed $180 annually">Billed monthly</span>
+        </div>
+
+        <button class="btn btn-secondary">Get Started</button>
+
+        <div class="divider"></div>
+
+        <ul class="features-list">
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Up to 3 projects
+          </li>
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            10 GB Cloud Storage
+          </li>
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Basic analytics dashboard
+          </li>
+          <li class="feature-item disabled">
+            <svg class="cross-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+            Custom domain support
+          </li>
+          <li class="feature-item disabled">
+            <svg class="cross-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+            24/7 Priority support
+          </li>
+        </ul>
+      </div>
+
+      <!-- Pro Plan (Featured) -->
+      <div class="pricing-card featured">
+        <div class="popular-badge">Most Popular</div>
+        <div class="card-header">
+          <h2 class="plan-name">Professional</h2>
+          <p class="plan-desc">Best for scaling startups and fast-moving teams.</p>
+          <div class="price-wrapper">
+            <span class="currency">$</span>
+            <span class="price-amount" data-monthly="49" data-yearly="39">49</span>
+            <span class="period">/month</span>
+          </div>
+          <span class="billing-note" data-monthly="Billed monthly" data-yearly="Billed $468 annually">Billed monthly</span>
+        </div>
+
+        <button class="btn btn-primary">Start 14-Day Free Trial</button>
+
+        <div class="divider"></div>
+
+        <ul class="features-list">
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Unlimited projects
+          </li>
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            100 GB Cloud Storage
+          </li>
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Advanced analytics &amp; reports
+          </li>
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Custom domain support
+          </li>
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Priority email support
+          </li>
+        </ul>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="pricing-card">
+        <div class="card-header">
+          <h2 class="plan-name">Enterprise</h2>
+          <p class="plan-desc">Dedicated infrastructure and compliance for organizations.</p>
+          <div class="price-wrapper">
+            <span class="currency">$</span>
+            <span class="price-amount" data-monthly="99" data-yearly="79">99</span>
+            <span class="period">/month</span>
+          </div>
+          <span class="billing-note" data-monthly="Billed monthly" data-yearly="Billed $948 annually">Billed monthly</span>
+        </div>
+
+        <button class="btn btn-secondary">Contact Sales</button>
+
+        <div class="divider"></div>
+
+        <ul class="features-list">
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Unlimited everything
+          </li>
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Unlimited Cloud Storage
+          </li>
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Custom SLA &amp; 99.99% uptime
+          </li>
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Dedicated account manager
+          </li>
+          <li class="feature-item">
+            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            24/7 Phone &amp; Slack support
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Have custom requirements? <a href="#">Talk to our enterprise team &rarr;</a></p>
+    </footer>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
